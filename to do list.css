@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url('coffe.gif');
+    background-image: url(coffe.gif);
+    background-image: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #fff;
+}
+
+#clock {
+    font-size: 24px;
+    color: #fff;
+}
+
+#date {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.todo-list {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+}
+
+
+
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-display {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.timer-controls button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.timer-controls button#startButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.timer-controls button#resetButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.settings label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.settings input {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Style the navigation menu */
+nav {
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+li {
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: grey; /* Change the color on hover */
+}

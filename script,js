@@ -1,0 +1,160 @@
+let timer;
+let minutes = 25;
+let seconds = 0;
+let isRunning = false;
+
+function startTimer() {
+    if (!isRunning) {
+        isRunning = true;
+        timer = setInterval(updateTimer, 1000);
+    }
+}
+
+function pauseTimer() {
+    isRunning = false;
+    clearInterval(timer);
+}
+
+function resetTimer() {
+    isRunning = false;
+    clearInterval(timer);
+    minutes = 25;
+    seconds = 0;
+    updateDisplay();
+}
+
+function updateTimer() {
+    if (minutes === 0 && seconds === 0) {
+        // Timer is done
+        pauseTimer();
+        alert('Time is up! Take a break.');
+    } else if (seconds === 0) {
+        minutes--;
+        seconds = 59;
+    } else {
+        seconds--;
+    }
+    updateDisplay();
+}
+
+function updateDisplay() {
+    document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+    document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+}
+
+document.getElementById('start').addEventListener('click', startTimer);
+document.getElementById('pause').addEventListener('click', pauseTimer);
+document.getElementById('reset').addEventListener('click', resetTimer);
+
+resetTimer();
+
+
+
+
+const audio = document.getElementById('audio');
+const playButton = document.getElementById('play');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const songTitle = document.getElementById('song-title');
+const artist = document.getElementById('artist');
+
+const songs = [
+    {
+        title: 'Lofi Playlist',
+        artist: 'LOfi',
+        audioSrc: 'lofi.mp3',
+        Image: 'coffe.gif'
+    },
+    {
+        title: 'Hope',
+        artist: 'NCS',
+        audioSrc: 'hope.mp3',
+    },
+    {
+        title: 'Beautiful Creatures',
+        artist: 'Illenum ft.MAX',
+        audioSrc: 'beautiful.mp3',
+    },
+    {
+        title: 'Break',
+        artist: 'Shiek',
+        audioSrc: 'break.mp3',
+    },
+    // Add more songs as needed
+];
+
+let currentSongIndex = 0;
+
+function loadSong(songIndex) {
+    const song = songs[songIndex];
+    songTitle.textContent = song.title;
+    artist.textContent = song.artist;
+    audio.src = song.audioSrc;
+}
+
+function playSong() {
+    audio.play();
+    playButton.innerHTML = '<i class="fa fa-pause"></i>';
+}
+
+function pauseSong() {
+    audio.pause();
+    playButton.innerHTML = '<i class="fa fa-play"></i>';
+}
+
+function prevSong() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    loadSong(currentSongIndex);
+    playSong();
+}
+
+function nextSong() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    loadSong(currentSongIndex);
+    playSong();
+}
+
+playButton.addEventListener('click', () => {
+    if (audio.paused) {
+        playSong();
+    } else {
+        pauseSong();
+    }
+});
+
+prevButton.addEventListener('click', prevSong);
+nextButton.addEventListener('click', nextSong);
+
+// Initial song load
+loadSong(currentSongIndex);
+
+
+// Array of background image URLs
+const backgroundImages = [
+    'sun.jpg',
+    '/Users/iansamuelfrallon/Desktop/POMODORO TIMER APP/beachh.jpeg',
+    'beachh.jpg',
+    // Add more image URLs here
+];
+
+let currentIndex = 0;
+
+const changeBackground = () => {
+    currentIndex = (currentIndex + 1) % backgroundImages.length;
+    const imageUrl = backgroundImages[currentIndex];
+    document.body.style.backgroundImage = `url(${imageUrl})`;
+};
+
+// Attach click event to the button
+const changeBackgroundButton = document.getElementById('changeBackground');
+changeBackgroundButton.addEventListener('click', changeBackground);
+
+// Set initial background
+changeBackground();
+
+
+
+
+
+
+

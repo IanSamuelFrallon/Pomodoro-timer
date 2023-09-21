@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="to do list.html">To-Do List</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="music-player">
+        <div class="song-info">
+            <h2 id="song-title">Song Title</h2>
+            <p id="artist">Artist</p>
+        </div>
+        <audio id="audio" src="lofi.mp3"></audio>
+    </div>
+       <div class="player-controls">
+            <button id="prev" class="control-button"><i class="fas fa-step-backward"></i></button>
+            <button id="play" class="control-button"><i class="fas fa-play"></i></button>
+            <button id="next" class="control-button"><i class="fas fa-step-forward"></i></button>
+        </div>
+    
+        <div id="image-container">
+            <button id="change-image-button">Change Background</button>
+        </div>
+
+    <script src="script,js"></script>
+</body>
+</html>

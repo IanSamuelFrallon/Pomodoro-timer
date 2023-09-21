@@ -1,0 +1,154 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+background-image: url(coffe.gif);
+    background-image: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10%;
+}
+
+/* Style the navigation menu */
+nav {
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+li {
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: grey; /* Change the color on hover */
+}
+
+
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.timer {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.controls button {
+    font-size: 1rem;
+    padding: 5px 15px;
+    margin: 5px;
+}
+
+/* Styles for the "Start" button */
+#start {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+/* Styles for the "Pause" button */
+#pause {
+    background-color: #FF9800; /* Orange */
+    color: white;
+}
+
+/* Styles for the "Reset" button */
+#reset {
+    background-color: #F44336; /* Red */
+    color: white;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Display content vertically */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Display content vertically */
+    align-items: center;
+}
+
+.pomodoro-timer {
+    /* Pomodoro timer styles */
+    /* ... */
+}
+
+.music-player {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    margin-top: 20px; /* Add margin to separate the timer and music player */
+}
+
+
+.player-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.control-button {
+  
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+
